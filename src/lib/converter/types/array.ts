@@ -22,8 +22,8 @@ export class ArrayConverter extends ConverterTypeComponent implements TypeConver
           && !!type.symbol
           && type.symbol.name === 'Array'
           && !type.symbol.parent
-          && !!type.typeArguments
-          && type.typeArguments.length === 1;
+          && !!(type as any).typeArguments
+          && (type as any).typeArguments.length === 1;
     }
 
     /**
@@ -61,7 +61,7 @@ export class ArrayConverter extends ConverterTypeComponent implements TypeConver
      * @returns The type reflection representing the given type reference.
      */
     convertType(context: Context, type: ts.TypeReference): Type | undefined {
-        const result = this.owner.convertType(context, undefined, type.typeArguments && type.typeArguments[0]);
+        const result = this.owner.convertType(context, undefined, (type as any).typeArguments && (type as any).typeArguments[0]);
         if (result) {
             return new ArrayType(result);
         }

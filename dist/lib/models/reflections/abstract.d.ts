@@ -56,19 +56,19 @@ export declare enum ReflectionFlag {
 export declare class ReflectionFlags extends Array<string> {
     private flags;
     hasFlag(flag: ReflectionFlag): boolean;
-    readonly isPrivate: boolean;
-    readonly isProtected: boolean;
-    readonly isPublic: boolean;
-    readonly isStatic: boolean;
-    readonly isExported: boolean;
-    readonly isExternal: boolean;
-    readonly isOptional: boolean;
-    readonly isRest: boolean;
-    readonly hasExportAssignment: boolean;
-    readonly isConstructorProperty: boolean;
-    readonly isAbstract: boolean;
-    readonly isConst: boolean;
-    readonly isLet: boolean;
+    get isPrivate(): boolean;
+    get isProtected(): boolean;
+    get isPublic(): boolean;
+    get isStatic(): boolean;
+    get isExported(): boolean;
+    get isExternal(): boolean;
+    get isOptional(): boolean;
+    get isRest(): boolean;
+    get hasExportAssignment(): boolean;
+    get isConstructorProperty(): boolean;
+    get isAbstract(): boolean;
+    get isConst(): boolean;
+    get isLet(): boolean;
     setFlag(flag: ReflectionFlag, set: boolean): void;
     private setSingleFlag;
 }

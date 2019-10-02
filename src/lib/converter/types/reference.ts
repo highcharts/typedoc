@@ -81,8 +81,8 @@ export class ReferenceConverter extends ConverterTypeComponent implements TypeNo
         }
 
         const result = createReferenceType(context, type.symbol);
-        if (result && type.typeArguments) {
-            result.typeArguments = this.owner.convertTypes(context, undefined, type.typeArguments);
+        if (result && (type as any).typeArguments) {
+            result.typeArguments = this.owner.convertTypes(context, undefined, (type as any).typeArguments);
         }
 
         return result;

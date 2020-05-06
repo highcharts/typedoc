@@ -138,7 +138,7 @@ let Application = Application_1 = class Application extends component_1.Childabl
         ].join(typescript.sys.newLine);
     }
 };
-Application.VERSION = '0.15.36';
+Application.VERSION = '0.17.38';
 __decorate([
     component_1.Option({
         name: 'logger',

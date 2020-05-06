@@ -47,7 +47,7 @@
     "@types/marked": "^0.6.5",
     "@types/mocha": "^5.2.7",
     "@types/mockery": "^1.4.29",
-    "@types/node": "^12.7.2",
+    "@types/node": "^12.7.5",
     "@types/shelljs": "^0.8.5",
     "mocha": "^6.2.0",
     "mockery": "^2.1.0",
